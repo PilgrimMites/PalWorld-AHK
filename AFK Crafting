@@ -1,0 +1,12 @@
+#Persistent
+#MaxThreadsPerHotkey 2
+
+Toggle := false 
+
+f7:: ; This will hold down f even if pal world is not active window.
+    Toggle := !Toggle ; Toggle the state
+    if (Toggle)
+		ControlSend, , {F Down}, ahk_exe Palworld-Win64-Shipping.exe
+    else
+		ControlSend, , {F Up}, ahk_exe Palworld-Win64-Shipping.exe
+return
